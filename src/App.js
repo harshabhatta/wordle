@@ -1,8 +1,17 @@
 import React from 'react';
 import './App.css';
+import Game from './components/Game';
 
 function App() {
-  return <div className={'app'}>Hello World</div>;
+  const darkModeHandler = (dark) => {
+    if (dark) document.documentElement.classList.add('dark');
+    else document.documentElement.classList.remove('dark');
+  };
+  return (
+    <div className={'app'}>
+      <Game darkmode={darkModeHandler} />
+    </div>
+  );
 }
 
 export default App;
