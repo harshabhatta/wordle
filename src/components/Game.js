@@ -4,7 +4,6 @@ import Navbar from './Navbar/Navbar';
 
 const Game = (props) => {
   const [dark, setDark] = useState(false);
-  const [help, setHelp] = useState(false);
 
   useEffect(() => {
     props.darkmode(dark);
@@ -12,7 +11,7 @@ const Game = (props) => {
 
   return (
     <div className={styles.game}>
-      <Navbar help={setHelp} darkmode={setDark} dark={dark} />
+      <Navbar darkmode={setDark} dark={dark} />
       <hr />
     </div>
   );

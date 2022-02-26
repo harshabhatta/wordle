@@ -1,0 +1,33 @@
+.description {
+  text-align: left;
+  margin-right: 1rem;
+  opacity: 75%;
+  padding-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.example_title {
+  text-align: left;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.box_container {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.box_suggestion {
+  text-align: left;
+  margin: 0.75rem 0;
+  opacity: 75%;
+}
+
+.content_color_black {
+  color: #000;
+}
+
+.content_color_white {
+  color: #fff;
+}

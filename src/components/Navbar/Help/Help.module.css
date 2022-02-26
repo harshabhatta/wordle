@@ -1,0 +1,16 @@
+.help_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.bg_color_black {
+  background-color: #2c2b2b;
+}
+
+.bg_color_white {
+  background-color: #fff;
+}

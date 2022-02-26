@@ -1,0 +1,41 @@
+.box_container {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 2px solid rgb(209 213 219);
+}
+
+.box_correct {
+  color: #fff;
+  background-color: rgb(16 185 129);
+  animation: 0.5s linear flipping;
+}
+
+.box_exist {
+  color: #fff;
+  background-color: rgb(245 158 11);
+  animation: 0.5s linear flipping;
+}
+
+.box_notexist {
+  color: #fff;
+  background-color: rgb(113 113 122);
+  animation: 0.5s linear flipping;
+}
+@keyframes flipping {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
