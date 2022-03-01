@@ -1,0 +1,65 @@
+.key {
+  cursor: pointer;
+  height: 4rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.bg_light {
+  background-color: rgb(209 213 219);
+  color: #000;
+}
+
+.bg_light:hover {
+  background-color: rgb(229 231 235);
+}
+
+.bg_dark {
+  color: #fff;
+  background-color: rgb(113 113 122);
+}
+
+.bg_dark:hover {
+  background-color: rgb(161 161 170);
+}
+
+.bg_correct {
+  color: #fff;
+  background-color: rgb(16 185 129);
+  animation: 0.5s linear flipping;
+}
+
+.bg_exist {
+  color: #fff;
+  background-color: rgb(245 158 11);
+  animation: 0.5s linear flipping;
+}
+
+.bg_notexist_light {
+  color: #fff;
+  background-color: rgb(113 113 122);
+  animation: 0.5s linear flipping;
+}
+
+.bg_notexist_dark {
+  color: #fff;
+  background-color: rgb(55 65 81);
+  animation: 0.5s linear flipping;
+}
+@keyframes flipping {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}

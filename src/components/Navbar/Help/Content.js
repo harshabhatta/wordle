@@ -8,6 +8,7 @@ const Content = (props) => {
     <div
       className={dark ? styles.content_color_white : styles.content_color_black}
     >
+      <h3 className={styles.title}>How to play</h3>
       <p className={styles.description}>
         Guess the <b>WORDLE</b> in six tries.
         <br />

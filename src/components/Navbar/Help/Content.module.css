@@ -6,6 +6,12 @@
   line-height: 1.5;
 }
 
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
 .example_title {
   text-align: left;
   font-weight: bold;

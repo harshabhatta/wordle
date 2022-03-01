@@ -1,0 +1,16 @@
+.keyboard_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.keyboard_row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.3rem;
+  column-gap: 0.2rem;
+}
