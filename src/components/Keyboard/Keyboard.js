@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Key from './Key/Key';
 import styles from './Keyboard.module.css';
 
@@ -11,16 +11,7 @@ const keyboard = [
   { line: '1ZXCVBNM2' },
 ];
 
-const setDefaultValues = () => {
-  let defaultLetters = [];
-  alphabets.split('').forEach((i) => {
-    defaultLetters[i] = '';
-  });
-  return defaultLetters;
-};
-
 const Keyboard = (props) => {
-  //   const [letters, setLetters] = useState(setDefaultValues);
   const keyHandler = (value) => {
     props.keyHandler(value);
   };
@@ -38,19 +29,12 @@ const Keyboard = (props) => {
     }
   };
 
-  console.log(props.letters);
-
   useEffect(() => {
     window.addEventListener('keydown', onkeydownHandler);
     return () => {
       window.removeEventListener('keydown', onkeydownHandler);
     };
   });
-
-  //   useEffect(() => {
-  //     console.log(props);
-  //     setLetters(props.letters);
-  //   }, [props.changed]);
 
   return (
     <div className={styles.keyboard_container}>
@@ -59,9 +43,23 @@ const Keyboard = (props) => {
           <div className={styles.keyboard_row} key={key}>
             {row.line.split('').map((value, key) => {
               if (value === '1') {
-                return <Key value='ENTER' getKey={keyHandler} key={key} />;
+                return (
+                  <Key
+                    value='ENTER'
+                    getKey={keyHandler}
+                    key={key}
+                    dark={props.dark}
+                  />
+                );
               } else if (value === '2') {
-                return <Key value='DEL' getKey={keyHandler} key={key} />;
+                return (
+                  <Key
+                    value='DEL'
+                    getKey={keyHandler}
+                    key={key}
+                    dark={props.dark}
+                  />
+                );
               } else {
                 return (
                   <Key
@@ -69,6 +67,7 @@ const Keyboard = (props) => {
                     value={value}
                     key={key}
                     state={props.letters[value]}
+                    dark={props.dark}
                   />
                 );
               }

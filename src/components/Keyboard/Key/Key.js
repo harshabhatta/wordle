@@ -4,9 +4,6 @@ import BackspaceIcon from '@mui/icons-material/Backspace';
 
 const Key = (props) => {
   const [bgStyle, setBgStyle] = useState(styles.bg_light);
-  //   props.dark ? `${styles.bg_light}` : `${styles.bg_dark}`;
-
-  //const x = props.value.length === 1 ? 'w-7 sm:w-10 ' : 'p-2 sm:p-4 ';
   const returnKey = () => {
     props.getKey(props.value);
   };
