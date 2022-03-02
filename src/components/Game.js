@@ -4,6 +4,10 @@ import styles from './Game.module.css';
 import Keyboard from './Keyboard/Keyboard';
 import Navbar from './Navbar/Navbar';
 import Error from './Error/Error';
+import words from './words';
+
+const gameWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
+console.log(gameWord);
 
 const Game = (props) => {
   const [dark, setDark] = useState(false);
@@ -12,10 +16,6 @@ const Game = (props) => {
   const [clicked, setClicked] = useState(0);
   const [changed, setChanged] = useState(false);
   const [error, setError] = useState('');
-
-  useEffect(() => {
-    props.darkmode(dark);
-  }, [dark]);
 
   const keyHandler = (value) => {
     setClicked(clicked + 1);
@@ -26,6 +26,10 @@ const Game = (props) => {
     setLetters(lettersValue);
     setChanged(!changed);
   };
+
+  useEffect(() => {
+    props.darkmode(dark);
+  }, [dark]);
 
   return (
     <>
@@ -39,6 +43,8 @@ const Game = (props) => {
           clicks={clicked}
           error={setError}
           dark={dark}
+          correct={gameWord}
+          // newGame={newGame}
         />
         <Keyboard
           dark={dark}
@@ -48,6 +54,7 @@ const Game = (props) => {
           clicked={clicked}
           changed={changed}
           letters={letters}
+          // newGame={newGame}
         />
       </div>
     </>

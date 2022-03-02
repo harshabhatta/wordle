@@ -3,3 +3,13 @@
   color: slategray;
   font-weight: bold;
 }
+
+.new_game_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: slategray;
+}

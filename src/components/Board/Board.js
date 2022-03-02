@@ -15,8 +15,6 @@ const defaultBoard = () => {
   return board;
 };
 
-const correct = 'FORCE';
-
 const Board = (props) => {
   const [letters, setLetters] = useState({});
   const [board, setBoard] = useState(defaultBoard());
@@ -59,13 +57,13 @@ const Board = (props) => {
       }
       if (words.includes(word.toLowerCase())) {
         for (let i = 0; i < 5; i++) {
-          if (correct[i] === board[row][i][0]) {
+          if (props.correct[i] === board[row][i][0]) {
             setBoard((prev) => {
               prev[row][i][1] = 'C';
               return prev;
             });
             correctLetters++;
-          } else if (correct.includes(board[row][i][0])) {
+          } else if (props.correct.includes(board[row][i][0])) {
             setBoard((prev) => {
               prev[row][i][1] = 'E';
               return prev;
@@ -80,7 +78,7 @@ const Board = (props) => {
           if (row === 5) {
             setLost(true);
             setTimeout(() => {
-              setMessage(`It was ${correct}`);
+              setMessage(`It was ${props.correct}`);
             }, 750);
           }
           setCol(0);

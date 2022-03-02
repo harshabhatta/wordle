@@ -4,6 +4,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Switch } from '@mui/material';
 import styles from './Settings.module.css';
+import ReplayIcon from '@mui/icons-material/Replay';
 
 const Settings = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -28,6 +29,14 @@ const Settings = (props) => {
           control={<Switch onChange={handleChange} />}
           label='Dark mode'
         />
+        <hr />
+        <div
+          className={styles.new_game_container}
+          onClick={() => window.location.reload(false)}
+        >
+          <ReplayIcon />
+          <p>New Game!</p>
+        </div>
       </Menu>
     </>
   );
