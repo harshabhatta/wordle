@@ -1,13 +1,10 @@
 .box_container {
-  width: 3rem;
-  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   margin: 0;
   font-weight: bold;
-  font-size: 1.5rem;
   border: 2px solid rgb(209 213 219);
 }
 
@@ -37,5 +34,21 @@
   }
   100% {
     transform: rotateX(0deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .box_container {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .box_container {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
   }
 }
