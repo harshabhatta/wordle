@@ -44,7 +44,6 @@ const Game = (props) => {
           error={setError}
           dark={dark}
           correct={gameWord}
-          // newGame={newGame}
         />
         <Keyboard
           dark={dark}
@@ -54,7 +53,6 @@ const Game = (props) => {
           clicked={clicked}
           changed={changed}
           letters={letters}
-          // newGame={newGame}
         />
       </div>
     </>

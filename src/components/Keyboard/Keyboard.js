@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Key from './Key/Key';
 import styles from './Keyboard.module.css';
 
-const alphabets = 'abcdefjhijklmnopqrstuvwxyz';
+const alphabets = 'abcdefghijklmnopqrstuvwxyz';
 const keyboard = [
   {
     line: 'QWERTYUIOP',
